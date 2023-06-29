@@ -1,0 +1,38 @@
+
+while True:
+    name = str(input('Enter your name: '))
+    if len(name) < 3:
+        print('Invalid Entry')
+        continue
+    while True:
+        age = int(input('Enter your age: '))
+        if age > 150:
+            print('Invalid Entry')
+            continue
+        if age < 0:
+            print('Invalid Entry')
+            continue
+        else:
+            break
+    while True:
+        salary = float(input('Enter your salary: '))
+        if salary < 0:
+            print('Invalid Entry')
+            continue
+        else:
+            break
+    while True:
+        sex = str(input('Enter your sex: ')).strip().upper()[0]
+        if sex not in 'MF':
+            print('Invalid Entry')
+            continue
+        else:
+            break
+    while True:
+        marital_status = str(input('Enter your marital status: ')).strip().upper()[0]
+        if marital_status not in 'SCVD':
+            print('Invalid Entry')
+            continue
+        else:
+            break
+    break
