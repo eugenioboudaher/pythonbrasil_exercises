@@ -1,0 +1,37 @@
+class Person:
+    def __init__(self, name, age, height, weigh):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.weigh = weigh
+
+    def shoe_info(self):
+        print(f'Name: {self.name}')
+        print(f'Age: {self.age}')
+        print(f'Height: {self.height}')
+        print(f'Weigh: {self.weigh}')
+
+    def get_older(self):
+        self.age += 1
+
+    def get_fatter(self):
+        self.weigh += 5
+
+    def get_slimmer(self):
+        self.weigh -= 5
+
+    def grow(self):
+        if self.age < 21:
+            self.height += 0.5
+
+
+joe = Person('Joe', 12, 155, 50)
+joe.shoe_info()
+joe.get_fatter()
+joe.get_older()
+joe.grow()
+joe.shoe_info()
+
+
+
+
