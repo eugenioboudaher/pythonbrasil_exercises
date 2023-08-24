@@ -1,0 +1,40 @@
+class MyAnimal:
+    def __init__(self, name):
+        self.name = name
+        self.hunger = 0
+        self.health = 0
+        self.age = 0
+
+    def feed_healthy(self):
+        self.health += 1
+        self.hunger += 1
+
+    def feed_junky(self):
+        self.health -= 1
+        self.hunger += 1
+
+    def exercise(self):
+        self.health += 2
+        self.hunger -= 1
+
+    def time_goes_by(self):
+        self.hunger -= 1
+        self.health -= 1
+        self.age += 0.1
+
+    def show(self):
+        if self.hunger == 0 or self.health == 0:
+            print('Dead')
+        if self.hunger >= 10:
+            self.hunger = 10
+        if self.health >= 10:
+            self.health = 10
+        else:
+            print(f'Name: {self.name}')
+            print(f'Hunger: {self.health}')
+            print(f'Health: {self.hunger}')
+            print(f'Age: {self.age}')
+            print(f'Humor:', (self.hunger + self.health) / 2)
+
+
+
