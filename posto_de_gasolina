@@ -1,0 +1,33 @@
+class GasPump:
+    def __init__(self, fuel, price_liter, liters):
+        self.fuel = fuel
+        self.price_liter = price_liter
+        self.liters = liters
+
+    def show_info(self):
+        print(f'Liters left = {self.liters}')
+        print(f'Price = U$ {self.price_liter:.2f}')
+        print(f'Fuel = {self.fuel}')
+
+    def fill_by_liters(self, amount):
+        self.liters -= amount
+        print(amount * self.price_liter)
+
+    def fill_by_money(self, amount):
+        liter_ = amount / self.price_liter
+        self.liters -= liter_
+
+    def change_price(self, amount):
+        self.price_liter = amount
+
+    def change_fuel(self, amount):
+        self.fuel = amount
+
+
+a = GasPump('gas', 5, 50)
+a.fill_by_money(50)
+a.change_price(6)
+a.change_fuel('diesel')
+a.show_info()
+
+
